@@ -14,7 +14,7 @@ export const ListCard = (props: Props) => {
   const { image, artistName, name, tags, onPress } = props;
 
   return (
-    <View style={styles.main}>
+    <View  style={styles.main}>
       <View style={{ flex: 0.20 }}>
         <View style={styles.imageContainer}>
           <Image resizeMode={"contain"} style={styles.image} source={{ uri: `${image}` }} />
@@ -27,7 +27,7 @@ export const ListCard = (props: Props) => {
         <View style={{ flexDirection: "row" }}>
           {tags.map((item, index) => {
             if (index > 2) return;
-            return <Text style={styles.subtitle}>#{item} </Text>;
+            return <Text key={index.toString()} style={styles.subtitle}>#{item} </Text>;
           })}
         </View>
 
