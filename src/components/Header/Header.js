@@ -1,7 +1,6 @@
 import React from "react";
-import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import { getValue } from "../helpers/ValueHelper";
-import { Colors } from "../style/Colors";
+import { Text, TouchableOpacity, View } from "react-native";
+import { styles } from "./style";
 
 type Props = {
   title: string,
@@ -31,21 +30,4 @@ Header.defaultProps = {
   leftButtonTitle: "Cancel",
   rightButtonTitle: "Done",
 };
-const styles = StyleSheet.create({
-  headerContainer: {
-    backgroundColor: Colors.header_gray,
-    padding: getValue(20),
-    flexDirection: "row",
-    justifyContent: "space-between",
-    borderBottomWidth: 0.3,
-    borderBottomColor: Colors.title,
-  },
-  title: {
-    color: Colors.header_title,
-    fontWeight: "bold",
-  },
-  buttonTitle: {
-    color: Colors.title,
-  },
 
-});

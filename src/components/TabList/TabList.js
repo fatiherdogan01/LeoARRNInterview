@@ -1,8 +1,7 @@
 import * as React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import { getValue } from "../helpers/ValueHelper";
-import { IData } from "../data/IData";
-import { Colors } from "../style/Colors";
+import {  View, FlatList } from "react-native";
+import { IData } from "../../data/IData";
+import { Colors } from "../../style/Colors";
 
 type Props = {
   data: IData,
@@ -38,9 +37,3 @@ const TabList = (props: Props) => {
 };
 export default TabList;
 
-const styles = StyleSheet.create({
-  tabs: {
-    marginHorizontal: getValue(20),
-  },
-
-});
