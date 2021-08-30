@@ -1,7 +1,8 @@
 import * as React from "react";
-import {  View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import { IData } from "../../data/IData";
 import { Colors } from "../../style/Colors";
+import { styles } from "./style";
 
 type Props = {
   data: IData,
@@ -13,9 +14,10 @@ type Props = {
 const TabList = (props: Props) => {
   const { data, tabsData, renderItem, renderTabs } = props;
   return (
-    <View style={{ flex: 1,backgroundColor:Colors.list_background }}>
-      <View style={{ flex: 0.1  }}>
+    <View style={{ flex: 1, backgroundColor: Colors.list_background }}>
+      <View style={{ flex: 0.1 }}>
         <FlatList
+          style={styles.shadow}
           data={tabsData}
           horizontal
           keyExtractor={(item, index) => `item-${index}`}

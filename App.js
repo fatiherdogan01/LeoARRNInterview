@@ -5,7 +5,7 @@ import { Colors } from "./src/style/Colors";
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 ,backgroundColor:Colors.header_gray }}>
       <StatusBar
         animated={true}
         backgroundColor={Colors.header_gray}
